@@ -6,7 +6,15 @@ require 'active_support/all'
 require_relative './models/book'
 require_relative './models/word'
 
-ActiveRecord::Base.establish_connection('postgres://localhost/dogs_and_toys')
+# ActiveRecord::Base.establish_connection(ENV['http://pacific-mountain-4356 :: rose'] || 'postgres://localhost/dogs_and_toys')
+ 
+ ActiveRecord::Base.establish_connection(
+  :adapter => "postgresql",
+  :host => "localhost",
+  :username => "camilacano", # Put your postgres username here
+  :password => "",
+  :database => "books"
+)
  
 
 ActiveRecord::Base.logger = Logger.new(STDOUT)
