@@ -1,0 +1,21 @@
+#body {
+	background-color: #990000;
+}
+
+#header {
+	margin-top: 75px;
+}
+
+.icon {
+	color: #320000;
+}
+
+.h1 {
+	font-size: 80px;
+	padding: 30px;
+}
+
+img {
+	width: 300px;
+	height: auto;
+}
