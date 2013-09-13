@@ -1,0 +1,14 @@
+<!-- show one entry and give the posibility to see all or edit -->
+<h2><%= @book.title %></h2>
+<h3><%= @book.author %></h3>
+<% @book.words.each do |word| %>
+	<ul>
+		<li><%= word.word %></li>
+	</ul>
+<% end %>
+<div>
+	<a href='/books/<%= @book.id %>/update'>EDIT</a> |
+	<a href='/books/<%= @book.id %>/add_word'>Add word</a> |
+	<a href='/books/<%= @book.id %>/delete'>
+	Delete Book </a>
+</div>

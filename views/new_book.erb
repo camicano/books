@@ -1,0 +1,13 @@
+<!-- should have a form that allow to add a new book -->
+<h2>Add a new book!</h2>
+<form method='post' action='/books/new'>
+	<div>
+		<label>Title:  </label>
+		<input type='text' name='book[title]' />
+	</div>
+	<div>
+		<label>Author:</label>	
+		<input type='text' name='book[author]' />
+	</div>
+	<input type='submit' value='add!' />
+</form>
