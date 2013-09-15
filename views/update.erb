@@ -1,12 +1,25 @@
-<h2>Edit</h2>
-<form method='post' action='/books/<%= @book.id %>/update'>
-	<div>
-		<label>Title:</label>
-		<input type='text' name='title' value='<%= @book.title %>' />
-	</div>
-	<div>
-		<label>Author:</label>	
-		<input type='text' name='author' value='<%= @book.author %>' />
-	</div>
-	<input type='submit' value='add!' />
-</form>
+<div class="offset-by-six">	
+	<table>
+		<tr>	
+			<td class="div2">	
+				<h2>Edit</h2>
+				<form method='post' action='/books/<%= @book.id %>/update'>
+					<div>
+						<label>Title:</label>
+						<input type='text' name='title' value='<%= @book.title %>' />
+					</div>
+					<div>
+						<label>Author:</label>	
+						<input type='text' name='author' value='<%= @book.author %>' />
+					</div>
+					<input type='submit' value='done' />
+				</form>
+			</td>
+		</tr>
+	</table>		
+<div>
+
+
+
+
+

@@ -84,7 +84,14 @@ end
 # SELECT "books".* FROM "books" WHERE "books"."id" = (params[:book_id]);
 # DELETE FROM "books" WHERE "books"."id" = (params[:book_id]);
 get '/books/:book_id/delete' do
-	book = Book.find(params[:book_id])
+	
+	book = Book.find(params[:book_id])	
+	words = book.words.where(book_id: params[:book_id])
+	
+	words.each do |word|
+		word.delete
+	end
+	
 	book.delete
 
 	redirect "/"

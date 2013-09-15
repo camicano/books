@@ -8,12 +8,19 @@
 	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
-<body>
-	<h1>This is your book list!</h1>
-	<nav>
-		<a href='/'>Show All</a> |
-		<a href='/books/new'>Add a New Book</a>
-	</nav>
+
+<body id='body'>
+	<div class="container">
+	<!-- Fixed header -->
+	<div>	
+		<h1 class="offset-by-seven h1">Library</h1>
+		<nav class="offset-by-seven nav">
+			<a class='a' href='/'>Show Library&nbsp;</a> |
+			<a class='a' href='/books/new'>&nbsp;Add New Book</a>
+		</nav>
+	</div>
+	<!-- content -->
 	<%= yield %>
+	</div>
 </body>
 </html>

@@ -1,13 +1,18 @@
 <!-- should have a display for all the books, under each book
 see or edit -->
+<div class="offset-by-five">
 <% @books.each do |book| %>
-<div>
-<h3><a href='books/<%= book.id %>/show'><%= book.title %></a></h3>
-<h4><%= book.author %></h4>
-	<% book.words.each do |word| %>
-		<ul>
-			<li><%= word.word %></li>
-		</ul>
-	<% end %>
-</div>
+<table>
+<tbody>
+	<tr>
+		<td class="div">
+			<a class="b" href='books/<%= book.id %>/show'>
+				<h3 class="b2"><%= book.title %></h3>
+				<h4>By: <%= book.author %></h4>
+			</a>
+		</td>
+	</tr>	
 <% end %>
+</tbody>
+</table>
+</div>

@@ -1,14 +1,30 @@
-<!-- show one entry and give the posibility to see all or edit -->
-<h2><%= @book.title %></h2>
-<h3><%= @book.author %></h3>
-<% @book.words.each do |word| %>
-	<ul>
-		<li><%= word.word %></li>
-	</ul>
-<% end %>
+<div class="offset-by-six">	
+	<table>
+		<tr>	
+			<td class="div2">	
+				<h2 class="b2"><%= @book.title %></h2>
+				<h4 class="h4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Author: <%= @book.author %></h4>
+					<ul>
+						<% @book.words.each do |word| %>	
+							<li><%= word.word %></li>
+						<% end %>
+						<li>&nbsp;</li>
+						<li>&nbsp;</li>
+					</ul>
+					
+				<div class="nav2">
+					<a class="a" href='/books/<%= @book.id %>/update'>
+						EDIT</a> | 
+					<a class="a" href='/books/<%= @book.id %>/add_word'>
+						Add word</a> | 
+					<a class="a" href='/books/<%= @book.id %>/delete'>
+						Delete Book </a>
+				</div>
+			</td>
+		</tr>
+	</table>		
 <div>
-	<a href='/books/<%= @book.id %>/update'>EDIT</a> |
-	<a href='/books/<%= @book.id %>/add_word'>Add word</a> |
-	<a href='/books/<%= @book.id %>/delete'>
-	Delete Book </a>
-</div>
+
+
+
+
